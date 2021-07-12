@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{% block title %}Editer un Patient{% endblock %}
+
+{% block body %}
+    <h1 >Editer le Patient</h1>
+
+    {{ include('patients/_form.html.twig', {'button_label': 'Mettre à Jour'}) }}
+
+    <a href="{{ path('patients_index') }}" class="btn btn-outline-primary my-2">Retourner à la liste des clients</a>
+
+    {{ include('patients/_delete_form.html.twig') }}
+{% endblock %}

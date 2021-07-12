@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{% block title %}Créer un nouveau Patient{% endblock %}
+
+{% block body %}
+    <section class="container-fluid">
+    <h1 class='text-align-center'> - Créer nouveau Patient - </h1>
+
+    {{ include('patients/_form.html.twig') }}
+
+    <a href="{{ path('patients_index') }}" class="btn btn-outline-danger mb-3">Retourner à la liste des clients</a>
+</section>
+{% endblock %}
